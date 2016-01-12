@@ -58,11 +58,11 @@ module.exports = {
     color,
     easing
   ]),
-  lineHeight,
-  fontWeight,
-  fontSize,
-  color,
-  easing,
-  breakpoints
+  lineHeight: lineHeight,
+  fontWeight: fontWeight,
+  fontSize: fontSize,
+  color: color,
+  easing: easing,
+  breakpoints: breakpoints
 }
 
