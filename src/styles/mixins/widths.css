@@ -1,0 +1,164 @@
+@define-mixin utils-widths-setup $namespace: '' {
+
+  /**
+   * Halves.
+   */
+  .$(namespace)one-whole,
+  .$(namespace)1                   { width: 100% !important; }
+
+  /**
+   * Halves.
+   */
+  .$(namespace)one-half,
+  .$(namespace)1-of-2,
+  .$(namespace)two-quarters,
+  .$(namespace)2-of-4,
+  .$(namespace)three-sixths,
+  .$(namespace)3-of-6,
+  .$(namespace)four-eighths,
+  .$(namespace)4-of-8,
+  .$(namespace)five-tenths,
+  .$(namespace)5-of-10,
+  .$(namespace)six-twelfths,
+  .$(namespace)6-of-12                { width: 50% !important; }
+
+  /**
+   * Thirds.
+   */
+  .$(namespace)one-third,
+  .$(namespace)1-of-3,
+  .$(namespace)two-sixths,
+  .$(namespace)2-of-6,
+  .$(namespace)three-ninths,
+  .$(namespace)3-of-9,
+  .$(namespace)four-twelfths,
+  .$(namespace)4-of-12                { width: 33.3333333% !important; }
+
+  .$(namespace)two-thirds,
+  .$(namespace)2-of-3,
+  .$(namespace)four-sixths,
+  .$(namespace)4-of-6,
+  .$(namespace)six-ninths,
+  .$(namespace)6-of-9,
+  .$(namespace)eight-twelfths,
+  .$(namespace)8-of-12                { width: 66.6666666% !important; }
+
+  /**
+   * Quarters.
+   */
+  .$(namespace)one-quarter,
+  .$(namespace)1-of-4,
+  .$(namespace)two-eighths,
+  .$(namespace)2-of-8,
+  .$(namespace)three-twelfths,
+  .$(namespace)3-of-12                { width: 25% !important; }
+
+  .$(namespace)three-quarters,
+  .$(namespace)3-of-4,
+  .$(namespace)six-eighths,
+  .$(namespace)6-of-8,
+  .$(namespace)nine-twelfths,
+  .$(namespace)9-of-12                { width: 75% !important; }
+
+  /**
+   * Fifths.
+   */
+  .$(namespace)one-fifth,
+  .$(namespace)1-of-5,
+  .$(namespace)two-tenths,
+  .$(namespace)2-of-10                { width: 20% !important; }
+
+  .$(namespace)two-fifths,
+  .$(namespace)2-of-5,
+  .$(namespace)four-tenths,
+  .$(namespace)4-of-10                { width: 40% !important; }
+
+  .$(namespace)three-fifths,
+  .$(namespace)3-of-5,
+  .$(namespace)six-tenths,
+  .$(namespace)6-of-10                { width: 60% !important; }
+
+  .$(namespace)four-fifths,
+  .$(namespace)4-of-5,
+  .$(namespace)eight-tenths,
+  .$(namespace)8-of-10                { width: 80% !important; }
+
+  /**
+   * Sixths.
+   */
+  .$(namespace)one-sixth,
+  .$(namespace)1-of-6,
+  .$(namespace)two-twelfths
+  .$(namespace)2-of-12                { width: 16.6666666% !important; }
+
+  .$(namespace)five-sixths,
+  .$(namespace)5-of-6,
+  .$(namespace)ten-twelfths
+  .$(namespace)10-of-12               { width: 83.3333333% !important; }
+
+  /**
+   * Eighths.
+   */
+  .$(namespace)one-eighth,
+  .$(namespace)1-of-8                 { width: 12.5% !important; }
+
+  .$(namespace)three-eighths,
+  .$(namespace)3-of-8                 { width: 37.5% !important; }
+
+  .$(namespace)five-eighths,
+  .$(namespace)5-of-8                 { width: 62.5% !important; }
+
+  .$(namespace)seven-eighths,
+  .$(namespace)7-of-8                 { width: 87.5% !important; }
+
+  /**
+   * Ninths.
+   */
+  .$(namespace)one-ninth,
+  .$(namespace)1-of-9                 { width: 11.1111111% !important; }
+
+  .$(namespace)two-ninths,
+  .$(namespace)2-of-9                 { width: 22.2222222% !important; }
+
+  .$(namespace)four-ninths,
+  .$(namespace)4-of-9                 { width: 44.4444444% !important; }
+
+  .$(namespace)five-ninths,
+  .$(namespace)5-of-9                 { width: 55.5555555% !important; }
+
+  .$(namespace)seven-ninths,
+  .$(namespace)7-of-9                 { width: 77.7777777% !important; }
+
+  .$(namespace)eight-ninths,
+  .$(namespace)8-of-9                 { width: 88.8888888% !important; }
+
+  /**
+   * Tenths.
+   */
+  .$(namespace)one-tenth,
+  .$(namespace)1-of-10                { width: 10% !important; }
+
+  .$(namespace)three-tenths,
+  .$(namespace)3-of-10                { width: 30% !important; }
+
+  .$(namespace)seven-tenths,
+  .$(namespace)7-of-10                { width: 70% !important; }
+
+  .$(namespace)nine-tenths,
+  .$(namespace)9-of-10                { width: 90% !important; }
+
+  /**
+   * Twelfths.
+   */
+  .$(namespace)one-twelfth,
+  .$(namespace)1-of-12                { width:  8.3333333% !important; }
+
+  .$(namespace)five-twelfths,
+  .$(namespace)5-of-12                { width: 41.6666666% !important; }
+
+  .$(namespace)seven-twelfths,
+  .$(namespace)7-of-12                { width: 58.3333333% !important; }
+
+  .$(namespace)eleven-twelfths,
+  .$(namespace)11-of-12               { width: 91.6666666% !important; }
+}

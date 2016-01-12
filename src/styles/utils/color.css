@@ -1,0 +1,62 @@
+@define-mixin utils-color-setup $namespace {
+  /**
+   * Inherit the ancestor's text color.
+   */
+  .$(namespace)inherit {
+    color: inherit !important;
+  }
+
+  .$(namespace)base {
+    color: var(--colorTextBase);
+  }
+
+  .$(namespace)emphasized {
+    color: var(--colorTextEmphasized);
+  }
+
+  .$(namespace)muted {
+    color: var(--colorTextMuted);
+  }
+
+  .$(namespace)accent {
+    color: var(--colorTextAccent);
+  }
+
+  .$(namespace)warning {
+    color: var(--colorTextWarning);
+  }
+
+  .$(namespace)error {
+    color: var(--colorTextError);
+  }
+
+  .$(namespace)success {
+    color: var(--colorTextSuccess);
+  }
+
+  .$(namespace)info {
+    color: var(--colorTextInfo);
+  }
+}
+
+:root {
+  @mixin utils-color-setup;
+}
+
+@media (--palm) {
+  :root {
+    @mixin utils-color-setup palm-;
+  }
+}
+
+@media (--lap) {
+  :root {
+    @mixin utils-color-setup lap-;
+  }
+}
+
+@media (--desk) {
+  :root {
+    @mixin utils-color-setup desk-;
+  }
+}

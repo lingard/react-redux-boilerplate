@@ -1,0 +1,241 @@
+@define-mixin utils-flex-setup $namespace {
+
+  /**
+   * Direction: row
+   */
+
+  .$(namespace)row {
+    flex-direction: row !important;
+  }
+
+  .$(namespace)row-reverse {
+    flex-direction: row-reverse !important;
+  }
+
+  /**
+   * Direction: column
+   */
+
+  .$(namespace)col {
+    flex-direction: column !important;
+  }
+
+  .$(namespace)col-reverse {
+    flex-direction: column-reverse !important;
+  }
+
+  /**
+   * Wrap
+   */
+
+  .$(namespace)wrap {
+    flex-wrap: wrap !important;
+  }
+
+  .$(namespace)nowrap {
+    flex-wrap: nowrap !important;
+  }
+
+  .$(namespace)wrap-reverse {
+    flex-wrap: wrap-reverse !important;
+  }
+
+  /**
+   * Align items along the main axis of the current line of the flex container
+   */
+
+  .$(namespace)justify-start {
+    justify-content: flex-start !important;
+  }
+
+  .$(namespace)justify-end {
+    justify-content: flex-end !important;
+  }
+
+  .$(namespace)justify-center {
+    justify-content: center !important;
+  }
+
+  .$(namespace)justify-between {
+    justify-content: space-between !important;
+  }
+
+  .$(namespace)justify-around {
+    justify-content: space-around !important;
+  }
+
+  /**
+   * Align items in the cross axis of the current line of the flex container
+   * Similar to `justify-content` but in the perpendicular direction
+   */
+
+  .$(namespace)align-items-start {
+    align-items: flex-start !important;
+  }
+
+  .$(namespace)align-items-end {
+    align-items: flex-end !important;
+  }
+
+  .$(namespace)align-items-center {
+    align-items: center !important;
+  }
+
+  .$(namespace)align-items-stretch {
+    align-items: stretch !important;
+  }
+
+  .$(namespace)align-items-baseline {
+    align-items: baseline !important;
+  }
+
+  /**
+   * Aligns items within the flex container when there is extra space in the cross-axis
+   *
+   * Has no effect when there is only one line of flex items.
+   */
+
+  .$(namespace)align-content-start {
+    align-content: flex-start !important;
+  }
+
+  .$(namespace)align-content-end {
+    align-content: flex-end !important;
+  }
+
+  .$(namespace)align-content-center {
+    align-content: center !important;
+  }
+
+  .$(namespace)align-content-stretch {
+    align-content: stretch !important;
+  }
+
+  .$(namespace)align-content-between {
+    align-content: space-between !important;
+  }
+
+  .$(namespace)align-content-around {
+    align-content: space-around !important;
+  }
+
+
+  /* Applies to flex items
+     ========================================================================== */
+
+  /**
+   * Override default alignment of single item when specified by `align-items`
+   */
+
+  .$(namespace)align-self-start {
+    align-self: flex-start !important;
+  }
+
+  .$(namespace)align-self-end {
+    align-self: flex-end !important;
+  }
+
+  .$(namespace)align-self-center {
+    align-self: center !important;
+  }
+
+  .$(namespace)align-self-stretch {
+    align-self: stretch !important;
+  }
+
+  .$(namespace)align-self-baseline {
+    align-self: baseline !important;
+  }
+
+  .$(namespace)align-self-auto {
+    align-self: auto !important;
+  }
+
+  /**
+   * Change order without editing underlying HTML
+   */
+
+  .$(namespace)order-first {
+    order: -1 !important;
+  }
+
+  .$(namespace)order-last {
+    order: 1 !important;
+  }
+
+  .$(namespace)order-none {
+    order: 0 !important;
+  }
+
+  /**
+   * Disable shrinking
+   */
+  .$(namespace)no-shrink {
+    flex-shrink: 0 !important;
+  }
+
+  /**
+   * Specify the flex grow factor, which determines how much the flex item will
+   * grow relative to the rest of the flex items in the flex container.
+   *
+   * Supports 1-5 proportions
+   *
+   * 1. Provide all values to avoid IE10 bug with shorthand flex - http://git.io/vllC7
+   *    Use `0%` to avoid bug in IE10/11 with unitless flex basis - http://git.io/vllWx
+   */
+
+  .$(namespace)grow-1 {
+    flex: 1 1 0% !important; /* 1 */
+  }
+
+  .$(namespace)grow-2 {
+    flex: 2 1 0% !important;
+  }
+
+  .$(namespace)grow-3 {
+    flex: 3 1 0% !important;
+  }
+
+  .$(namespace)grow-4 {
+    flex: 4 1 0% !important;
+  }
+
+  .$(namespace)grow-5 {
+    flex: 5 1 0% !important;
+  }
+
+  /**
+   * Aligning with `auto` margins - http://www.w3.org/TR/css-flexbox-1/#auto-margins
+   */
+
+  .$(namespace)expand-left {
+    margin-left: auto !important;
+  }
+
+  .$(namespace)expand-right {
+    margin-right: auto !important;
+  }
+
+}
+
+:root {
+  @mixin utils-flex-setup;
+}
+
+@media (--palm) {
+  :root {
+    @mixin utils-flex-setup palm-;
+  }
+}
+
+@media (--lap) {
+  :root {
+    @mixin utils-flex-setup lap-;
+  }
+}
+
+@media (--desk) {
+  :root {
+    @mixin utils-flex-setup desk-;
+  }
+}

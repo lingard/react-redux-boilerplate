@@ -1,0 +1,62 @@
+@define-mixin utils-position-setup $namespace {
+
+  .$(namespace)absolute {
+    position: absolute !important;
+  }
+
+  /**
+   * Pins to all corners by default. But when a width and/or height are
+   * provided, the element will be centered in its nearest relatively-positioned
+   * ancestor.
+   */
+
+  .$(namespace)absolute-center {
+    bottom: 0 !important;
+    left: 0 !important;
+    margin: auto !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 0 !important;
+  }
+
+  /**
+   * 1. Make sure fixed elements are promoted into a new layer, for performance
+   *    reasons.
+   */
+
+  .$(namespace)fixed {
+    position: fixed !important;
+    backface-visibility: hidden; /* 1 */
+  }
+
+  .$(namespace)relative {
+    position: relative !important;
+  }
+
+  .$(namespace)static {
+    position: static !important;
+  }
+
+}
+
+:root {
+  @mixin utils-position-setup;
+}
+
+@media (--palm) {
+  :root {
+    @mixin utils-position-setup palm-;
+  }
+}
+
+@media (--lap) {
+  :root {
+    @mixin utils-position-setup lap-;
+  }
+}
+
+@media (--desk) {
+  :root {
+    @mixin utils-position-setup desk-;
+  }
+}

@@ -1,0 +1,23 @@
+@import '../mixins/spacing.css';
+
+:root {
+  @mixin utils-spacing-setup margin;
+}
+
+@media (--palm) {
+  :root {
+    @mixin utils-spacing-setup margin, palm-;
+  }
+}
+
+@media (--lap) {
+  :root {
+    @mixin utils-spacing-setup margin, lap-;
+  }
+}
+
+@media (--desk) {
+  :root {
+    @mixin utils-spacing-setup margin, desk-;
+  }
+}

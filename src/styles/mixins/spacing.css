@@ -1,0 +1,51 @@
+@define-mixin utils-spacing-setup $property, $namespace {
+
+  .$(namespace)a-n { $(property): 0; }
+  .$(namespace)y-n { $(property)-top:    0; $(property)-bottom: 0; }
+  .$(namespace)x-n { $(property)-left:   0; $(property)-right:  0; }
+  .$(namespace)l-n { $(property)-left:   0; }
+  .$(namespace)r-n { $(property)-right:  0; }
+  .$(namespace)t-n { $(property)-top:    0; }
+  .$(namespace)b-n { $(property)-bottom: 0; }
+
+  .$(namespace)a-xs { $(property): 0.25vr; }
+  .$(namespace)y-xs { $(property)-top:    0.25vr; $(property)-bottom: 0.25vr; }
+  .$(namespace)x-xs { $(property)-left:   0.25vr; $(property)-right:  0.25vr; }
+  .$(namespace)l-xs { $(property)-left:   0.25vr; }
+  .$(namespace)r-xs { $(property)-right:  0.25vr; }
+  .$(namespace)t-xs { $(property)-top:    0.25vr; }
+  .$(namespace)b-xs { $(property)-bottom: 0.25vr; }
+
+  .$(namespace)a-s { $(property): 0.5vr; }
+  .$(namespace)y-s { $(property)-top:    0.5vr; $(property)-bottom: 0.5vr; }
+  .$(namespace)x-s { $(property)-left:   0.5vr; $(property)-right:  0.5vr; }
+  .$(namespace)l-s { $(property)-left:   0.5vr; }
+  .$(namespace)r-s { $(property)-right:  0.5vr; }
+  .$(namespace)t-s { $(property)-top:    0.5vr; }
+  .$(namespace)b-s { $(property)-bottom: 0.5vr; }
+
+  .$(namespace)a-m { $(property): 1vr; }
+  .$(namespace)y-m { $(property)-top:    1vr; $(property)-bottom: 1vr; }
+  .$(namespace)x-m { $(property)-left:   1vr; $(property)-right:  1vr; }
+  .$(namespace)l-m { $(property)-left:   1vr; }
+  .$(namespace)r-m { $(property)-right:  1vr; }
+  .$(namespace)t-m { $(property)-top:    1vr; }
+  .$(namespace)b-m { $(property)-bottom: 1vr; }
+
+  .$(namespace)a-l { $(property): 2vr; }
+  .$(namespace)y-l { $(property)-top:    2vr; $(property)-bottom: 2vr; }
+  .$(namespace)x-l { $(property)-left:   2vr; $(property)-right:  2vr; }
+  .$(namespace)l-l { $(property)-left:   2vr; }
+  .$(namespace)r-l { $(property)-right:  2vr; }
+  .$(namespace)t-l { $(property)-top:    2vr; }
+  .$(namespace)b-l { $(property)-bottom: 2vr; }
+
+  .$(namespace)a-xl { $(property): 3vr; }
+  .$(namespace)y-xl { $(property)-top:    3vr; $(property)-bottom: 3vr; }
+  .$(namespace)x-xl { $(property)-left:   3vr; $(property)-right:  3vr; }
+  .$(namespace)l-xl { $(property)-left:   3vr; }
+  .$(namespace)r-xl { $(property)-right:  3vr; }
+  .$(namespace)t-xl { $(property)-top:    3vr; }
+  .$(namespace)b-xl { $(property)-bottom: 3vr; }
+
+}

@@ -1,0 +1,37 @@
+@define-mixin utils-text-align-setup $namespace {
+
+  .$(namespace)center {
+    text-align: center !important;
+  }
+
+  .$(namespace)left {
+    text-align: left !important;
+  }
+
+  .$(namespace)right {
+    text-align: right !important;
+  }
+
+}
+
+:root {
+  @mixin utils-text-align-setup;
+}
+
+@media (--palm) {
+  :root {
+    @mixin utils-text-align-setup palm-;
+  }
+}
+
+@media (--lap) {
+  :root {
+    @mixin utils-text-align-setup lap-;
+  }
+}
+
+@media (--desk) {
+  :root {
+    @mixin utils-text-align-setup desk-;
+  }
+}

@@ -1,0 +1,92 @@
+@define-mixin utils-display-setup $namespace {
+  /**
+   * Display-type utilities
+   */
+
+  .$(namespace)block {
+    display: block !important;
+  }
+
+  .$(namespace)hidden {
+    display: none !important;
+  }
+
+  .$(namespace)flex {
+    display: flex !important;
+  }
+
+  .$(namespace)flex-inline {
+    display: inline-flex !important;
+  }
+
+  /**
+   * 1. Set the flex-shrink default explicitly to fix IE10 - http://git.io/vllC7
+   */
+  .$(namespace)flex > *,
+  .$(namespace)flex-inline > * {
+    flex-shrink: 1; /* 1 */
+  }
+
+  /**
+   * Completely remove from the flow but leave available to screen readers.
+   */
+
+  .$(namespace)hidden-visually {
+    position: absolute !important;
+    overflow: hidden !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+  }
+
+  .$(namespace)inline {
+    display: inline !important;
+  }
+
+  /**
+   * 1. Fix for Firefox bug: an image styled `max-width:100%` within an
+   * inline-block will display at its default size, and not limit its width to
+   * 100% of an ancestral container.
+   */
+
+  .$(namespace)inline-block {
+    display: inline-block !important;
+    max-width: 100%; /* 1 */
+  }
+
+  .$(namespace)table {
+    display: table !important;
+  }
+
+  .$(namespace)table-cell {
+    display: table-cell !important;
+  }
+
+  .$(namespace)table-row {
+    display: table-row !important;
+  }
+}
+
+:root {
+  @mixin utils-display-setup;
+}
+
+@media (--palm) {
+  :root {
+    @mixin utils-display-setup palm-;
+  }
+}
+
+@media (--lap) {
+  :root {
+    @mixin utils-display-setup lap-;
+  }
+}
+
+@media (--desk) {
+  :root {
+    @mixin utils-display-setup desk-;
+  }
+}

@@ -1,0 +1,4 @@
+.base {
+  line-height: var(--lineHeightTitleRatio);
+  text-rendering: optimizeLegibility; /* Enable ligatures and kerning */
+}

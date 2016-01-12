@@ -1,0 +1,60 @@
+@define-mixin utils-font-size-setup $namespace {
+  .$(namespace)inherit {
+    font-size: inherit;
+  }
+
+  .$(namespace)xxsmall {
+    font-size: var(--fontSizeXXSmall);
+  }
+
+  .$(namespace)xsmall {
+    font-size: var(--fontSizeXSmall);
+  }
+
+  .$(namespace)small {
+    font-size: var(--fontSizeSmall);
+  }
+
+  .$(namespace)base {
+    font-size: var(--fontSizeBase);
+  }
+
+  .$(namespace)medium {
+    font-size: var(--fontSizeMedium);
+    line-height: 1.5rem;
+  }
+
+  .$(namespace)large {
+    font-size: var(--fontSizeLarge);
+  }
+
+  .$(namespace)xlarge {
+    font-size: var(--fontSizeXLarge);
+  }
+
+  .$(namespace)xxlarge {
+    font-size: var(--fontSizeXXLarge);
+  }
+}
+
+:root {
+  @mixin utils-font-size-setup;
+}
+
+@media (--palm) {
+  :root {
+    @mixin utils-font-size-setup palm-;
+  }
+}
+
+@media (--lap) {
+  :root {
+    @mixin utils-font-size-setup lap-;
+  }
+}
+
+@media (--desk) {
+  :root {
+    @mixin utils-font-size-setup desk-;
+  }
+}

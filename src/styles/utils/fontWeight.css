@@ -1,0 +1,39 @@
+@define-mixin utils-font-weight-setup $namespace {
+  .$(namespace)light {
+    font-weight: var(--fontWeightLight);
+  }
+
+  .$(namespace)normal {
+    font-weight: var(--fontWeightNormal);
+  }
+
+  .$(namespace)semibold {
+    font-weight: var(--fontWeightSemibold);
+  }
+
+  .$(namespace)bold {
+    font-weight: var(--fontWeightBold);
+  }
+}
+
+:root {
+  @mixin utils-font-weight-setup;
+}
+
+@media (--palm) {
+  :root {
+    @mixin utils-font-weight-setup palm-;
+  }
+}
+
+@media (--lap) {
+  :root {
+    @mixin utils-font-weight-setup lap-;
+  }
+}
+
+@media (--desk) {
+  :root {
+    @mixin utils-font-weight-setup desk-;
+  }
+}

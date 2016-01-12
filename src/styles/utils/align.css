@@ -1,0 +1,45 @@
+@define-mixin utils-align-setup $namespace {
+  /**
+   * Vertical alignment utilities
+   * Depends on an appropriate `display` value.
+   */
+
+  .$(namespace)baseline {
+    vertical-align: baseline !important;
+  }
+
+  .$(namespace)bottom {
+    vertical-align: bottom !important;
+  }
+
+  .$(namespace)middle {
+    vertical-align: middle !important;
+  }
+
+  .$(namespace)top {
+    vertical-align: top !important;
+  }
+
+}
+
+:root {
+  @mixin utils-align-setup;
+}
+
+@media (--palm) {
+  :root {
+    @mixin utils-align-setup palm-;
+  }
+}
+
+@media (--lap) {
+  :root {
+    @mixin utils-align-setup lap-;
+  }
+}
+
+@media (--desk) {
+  :root {
+    @mixin utils-align-setup desk-;
+  }
+}

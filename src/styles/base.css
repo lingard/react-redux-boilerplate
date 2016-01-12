@@ -1,0 +1,40 @@
+@import "normalize.css";
+@import "./normalize.css";
+
+:root {
+  --browser-font-size: 16px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* remove */
+body > div {
+  height: 100%;
+}
+
+html,
+body {
+  size: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: calcRelativeValue(18, 16, em);
+}
+
+body {
+  font: var(--fontSizeBase)/var(--lineHeightBaseRatio) Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: var(--colorTextBase);
+  padding: 0.5vr;
+  background: #F7F7F8;
+}
+
+:global body.js-helvetica-loaded {}
+
